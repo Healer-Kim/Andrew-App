@@ -9,20 +9,32 @@ const Container = styled.div`
 `;
 
 const WelcomeTitle = styled.h1`
-    font-size: 100px;
-    color: blue;
-    background-color: beige;
-    width: 50%;
+    font-size: 40px;
+    color: white;
+    font-weight: 800;
     martin-top: 20px;
-    text-align: center;
 `;
 
+const LeftSide = styled.div`
+background-color: white;
+`
+
+const RightSide = styled.div`
+backround-image: url("https://www.wallstwatchdog.com/wp-content/uploads/2016/11/Self-employed-business-person-working-from-home.jpg")
+height: 100vh
+`
 
 function LoginPage() { 
         return 
         <Container>
-            <WelcomeTitle>Left Half Page</WelcomeTitle>;
-            <WelcomeTitle>RIght Half Page</WelcomeTitle>;
+            <LeftSide>
+                <WelcomeTitle>Welcome Back!</WelcomeTitle>
+                <Label>ID</Label>
+                    <input type="text" name="username"></input>
+                <Label>Password</Label>
+                    <input type="password" name="password"></input>
+            </LeftSide>;
+            <RightSide>Load Image Here</RightSide>;
         </Container>
 }
 
