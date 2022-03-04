@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
       <Router>
-        <Route>exact path="/login" component={LoginPage}</Route><LoginPage />
-        <MainPage />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/main" component={<MainPage />} />
       </Router>
     </div>
   );

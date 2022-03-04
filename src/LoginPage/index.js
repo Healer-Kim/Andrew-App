@@ -1,4 +1,7 @@
-import styled from "styled-components"
+import styled from "styled-components";
+//import { Row, Col} from "react-bootstrap";
+//import "bootstrap/dist/css/bootstrap.min.css";
+import React, {useState} from "react";
 
 const Container = styled.div`
     width: 100%;
@@ -49,24 +52,34 @@ const LoginButton = styled.div`
 `
 
 function LoginPage() { 
-        return  (
-            <Container>
-                <LeftSide>
-                    <WelcomeTitle>Welcome Back!</WelcomeTitle>
-                    <labelWrapper>
-                        <Label>ID</Label>
-                            <input></input>
-                    </labelWrapper>
-                    <labelWrapper>
-                        <Label>Password</Label>
-                            <input type="password" name="password"></input>
-                    </labelWrapper>
-                    {/*Create a button for classwork*/}
-                    <LoginButton>Login</LoginButton>
-                </LeftSide>
-                <RightSide>assadasdassdadsadd</RightSide>;
-            </Container>
-        )
+    const [user, setUser] = useState({
+        id: "",
+        pw: "",
+    });
+    const {id, pw} = user;
+    // Create a function that routes to MainPage
+    const navigateToMainPage = () => {
+ // Create alert with warning message
+        alert("ID or Password is incorrect. Please enter a valid password.")
+    };
+    return  (
+        <Container>
+            <LeftSide>
+                <WelcomeTitle>Welcome Back!</WelcomeTitle>
+                <labelWrapper>
+                    <Label>ID</Label>
+                        <input></input>
+                </labelWrapper>
+                <labelWrapper>
+                    <Label>Password</Label>
+                        <input type="password" name="password"></input>
+                </labelWrapper>
+                {/*Create a button for classwork*/}
+                <LoginButton>Login</LoginButton>
+            </LeftSide>
+            <RightSide>assadasdassdadsadd</RightSide>;
+        </Container>
+    )
 }
 
 export default LoginPage;
