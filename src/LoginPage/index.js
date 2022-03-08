@@ -2,6 +2,7 @@ import styled from "styled-components";
 //import { Row, Col} from "react-bootstrap";
 //import "bootstrap/dist/css/bootstrap.min.css";
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;
@@ -49,9 +50,12 @@ const LoginButton = styled.div`
     text: 20px
     background-color: white;
     border: radius;
+    border-radius: 10px;
 `
 
 function LoginPage() { 
+    const history = useHistory();
+
     const [user, setUser] = useState({
         id: "",
         pw: "",
@@ -60,7 +64,7 @@ function LoginPage() {
     // Create a function that routes to MainPage
     const navigateToMainPage = () => {
  // Create alert with warning message
-        alert("ID or Password is incorrect. Please enter a valid password.")
+        history.push("/main")
     };
     return  (
         <Container>
@@ -75,7 +79,7 @@ function LoginPage() {
                         <input type="password" name="password"></input>
                 </labelWrapper>
                 {/*Create a button for classwork*/}
-                <LoginButton>Login</LoginButton>
+                <LoginButton onClick = {navigateToMainPage}>Login</LoginButton>
             </LeftSide>
             <RightSide>assadasdassdadsadd</RightSide>;
         </Container>
