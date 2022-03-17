@@ -99,7 +99,7 @@ function MainPage() {
                     <Instagram> </Instagram>
                 </MediaContainer>
                 <MediaContainer>
-                    <Twitter onClick="parent.location='twitter.com'"></Twitter>
+                    <Twitter></Twitter>
                 </MediaContainer>
                 <MediaContainer>
                     <Linkedin ></Linkedin>
