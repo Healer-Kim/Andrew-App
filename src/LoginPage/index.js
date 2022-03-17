@@ -5,30 +5,26 @@ import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
-    width: 100%;
     display: flex;
-    flex-direction: column;
 `;
 
 const WelcomeTitle = styled.h1`
     font-size: 40px;
-    color: green;
+    color: white;
     font-weight: 800;
-    martin-top: 20px;
+    margin-top: 20px;
 `;
 
 const LeftSide = styled.div`
-    background-color: RGB(3, 252, 111);
+    background-color: skyblue;
     width: 50%;
-
-    float: left;
+    height: 100vh
 `;//    padding: 10px;
 
 const RightSide = styled.div`
     
     width: 50%;
-    background-color: red;
-    float: left;
+    background-color: teal;
 `;// backround-image: url("https://www.wallstwatchdog.com/wp-content/uploads/2016/11/Self-employed-business-person-working-from-home.jpg");
 
 const LabelWrapper = styled.div`
@@ -58,13 +54,22 @@ function LoginPage() {
 
     const [user, setUser] = useState({
         id: "",
-        pw: "",
+        password: "",
     });
-    const {id, pw} = user;
+    const {id, password} = user;
     // Create a function that routes to MainPage
     const navigateToMainPage = () => {
- // Create alert with warning message
-        history.push("/main")
+        console.log("hhh")
+        // history.push("/main")
+        // check if id/email is emtpy string and pw is empty
+        if (id === "" || password === "") {
+            alert("Please enter a valid id or password.");
+            return;
+        }
+        if (id ==="andrew" && password === "1234") {
+            alert(`Welcome back ${id}!`)
+            history.push("/main")
+        }
     };
     return  (
         <Container>
@@ -81,7 +86,7 @@ function LoginPage() {
                 {/*Create a button for classwork*/}
                 <LoginButton onClick = {navigateToMainPage}>Login</LoginButton>
             </LeftSide>
-            <RightSide>assadasdassdadsadd</RightSide>;
+            <RightSide>assassdadsadd</RightSide>;
         </Container>
     )
 }
