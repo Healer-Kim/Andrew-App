@@ -19,16 +19,17 @@ const LeftSide = styled.div`
     background-color: skyblue;
     width: 50%;
     height: 100vh
+
 `;//    padding: 10px;
 
 const RightSide = styled.div`
-    
     width: 50%;
     background-color: teal;
-`;// backround-image: url("https://www.wallstwatchdog.com/wp-content/uploads/2016/11/Self-employed-business-person-working-from-home.jpg");
+    height: 100vh
+    backround-image: url("https://www.wallstwatchdog.com/wp-content/uploads/2016/11/Self-employed-business-person-working-from-home.jpg");
+`;// 
 
 const LabelWrapper = styled.div`
-
 `
 
 const Label = styled.div`
@@ -57,11 +58,8 @@ function LoginPage() {
         password: "",
     });
     const {id, password} = user;
-    // Create a function that routes to MainPage
     const navigateToMainPage = () => {
         console.log("hhh")
-        // history.push("/main")
-        // check if id/email is emtpy string and pw is empty
         if (id === "" || password === "") {
             alert("Please enter a valid id or password.");
             return;
@@ -75,18 +73,17 @@ function LoginPage() {
         <Container>
             <LeftSide>
                 <WelcomeTitle>Welcome Back!</WelcomeTitle>
-                <labelWrapper>
+                <LabelWrapper>
                     <Label>ID</Label>
                         <input></input>
-                </labelWrapper>
-                <labelWrapper>
+                </LabelWrapper>
+                <LabelWrapper>
                     <Label>Password</Label>
                         <input type="password" name="password"></input>
-                </labelWrapper>
-                {/*Create a button for classwork*/}
+                </LabelWrapper>
                 <LoginButton onClick = {navigateToMainPage}>Login</LoginButton>
             </LeftSide>
-            <RightSide>assassdadsadd</RightSide>;
+            <RightSide></RightSide>;
         </Container>
     )
 }
