@@ -46,8 +46,8 @@ width: 15px;
 background-color: gray;
 `
 
-const Twitter = styled.div`
-background-image: url("https://www.kindpng.com/picc/m/20-203710_round-twitter-icon-png-transparent-png.png");
+const Stackoverflow = styled.div`
+background-image: url("https://img.favpng.com/20/2/23/computer-icons-stack-overflow-png-favpng-n3JtYvCi2AAPpXaeJjpFeVrau.jpg");
 width: 40px;
 height: 40px;
 background-size: 40px 40px;
@@ -56,8 +56,8 @@ right: 0;
 top: 80px;
 `
 
-const Instagram = styled.div`
-background-image: url("https://cdn.pixabay.com/photo/2021/09/23/06/59/instagram-6648896__340.jpg");
+const Github = styled.div`
+background-image: url("https://pngset.com/images/github-icon-free-download-symbol-logo-trademark-label-transparent-png-1868500.png");
 width: 40px;
 height: 40px;
 background-size: 40px 40px;
@@ -86,6 +86,8 @@ right: 0;
 top: 120px;
 `
 
+
+
 function MainPage() {
     return (
         <Container2>
@@ -93,16 +95,13 @@ function MainPage() {
                 <WelcomeMain>Welcome to our Main Page!</WelcomeMain>
                 <Slogan>Learn how to study smart</Slogan>
                 <MediaContainer>
-                    <Facebook></Facebook>
+                    <button type="button" onClick="window.open('https://stackoverflow.com/')"> <img src="https://img.favpng.com/20/2/23/computer-icons-stack-overflow-png-favpng-n3JtYvCi2AAPpXaeJjpFeVrau.jpg" height ="15" width="15" /></button>
                 </MediaContainer>
                 <MediaContainer>
-                    <Instagram> </Instagram>
+                    <button type="button" onClick="window.open('https://github.com/')"> <img src="https://pngset.com/images/github-icon-free-download-symbol-logo-trademark-label-transparent-png-1868500.png" height ="15" width="15" /></button>
                 </MediaContainer>
                 <MediaContainer>
-                    <Twitter></Twitter>
-                </MediaContainer>
-                <MediaContainer>
-                    <Linkedin ></Linkedin>
+                    <button type="button" onClick="window.open('https://www.linkedin.com/home/?originalSubdomain=kr')"> <img src="https://cdn.pixabay.com/photo/2017/11/10/05/05/linkedin-2935407_960_720.png" height ="15" width="15" /></button>
                 </MediaContainer>
             </UpSide>
             <DownSide>
