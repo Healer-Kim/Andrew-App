@@ -93,7 +93,7 @@ function MainPage() {
         <Container2>
             <UpSide>
                 <WelcomeMain>Welcome to our Main Page!</WelcomeMain>
-                <Slogan>Learn how to study smart</Slogan>
+                <Slogan>Learn more about me</Slogan>
                 <MediaContainer>
                     <button type="button" onClick="window.open('https://stackoverflow.com/')"> <img src="https://img.favpng.com/20/2/23/computer-icons-stack-overflow-png-favpng-n3JtYvCi2AAPpXaeJjpFeVrau.jpg" height ="15" width="15" /></button>
                 </MediaContainer>
