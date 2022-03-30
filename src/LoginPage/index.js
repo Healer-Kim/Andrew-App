@@ -13,6 +13,7 @@ const WelcomeTitle = styled.h1`
     color: white;
     font-weight: 800;
     margin-top: 20px;
+    margin-left: 50px;
 `;
 
 const LeftSide = styled.div`
@@ -30,6 +31,7 @@ const RightSide = styled.div`
 `;// 
 
 const LabelWrapper = styled.div`
+margin-left: 50px;
 `
 
 const Label = styled.div`
@@ -41,13 +43,15 @@ const input = styled.div`
 `
 
 const LoginButton = styled.div`
-    width: 30%;
-    height: 30px;
+    width: 40px;
+    height: 25px;
     color: RGB(3, 148, 252);
-    text: 20px
+    text-size: 20px
     background-color: white;
-    border: radius;
+    border: solid;
     border-radius: 10px;
+    border-width: 5px;
+    margin-left: 180px;
 `
 
 function LoginPage() { 
