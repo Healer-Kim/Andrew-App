@@ -12,7 +12,7 @@ const Container2 = styled.div`
 const UpSide = styled.div`
 width 202vh;
 height 30vh;
-background-color: skyblue;
+background-color: #85F4FF;
 `;
 
 const DownSide = styled.div`
