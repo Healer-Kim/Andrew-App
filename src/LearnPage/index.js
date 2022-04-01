@@ -6,9 +6,23 @@ import { useHistory } from "react-router-dom";
 
 
 const LearnContainer = styled.div`
+height: 100vh;
 display: flex;
 flex-direction: column;
+background-color: #85F4FF;
 `;
+
+// const LeftSide = styled.h1`
+// width: 70%;
+// padding: 40px;
+// margin: auto;
+// text-align: center;
+// `
+
+// const RightSide = styled.h1`
+// width: 30%;
+
+// `
 
 const Upside = styled.div`
 width 202vh;
@@ -24,24 +38,27 @@ background-color: #42C2FF;
 
 
 
-const Title = styled.div`
+const Title = styled.h1`
 font-family: 'Roboto Condensed', sans-serif;
 font-size: 90px;
 text-align: center;
 margin-top: 40px;
 `;
 
-const Subtitle = styled.div`
+const Subtitle = styled.h1`
 font-family: 'Roboto Condensed', sans-serif;
 text-align: center;
 margin-top: 80px;
+font-weight: normal;
+font-size: 30px;
 `;
 
-const Maintext = styled.div`
+const Maintext = styled.h1`
 font-family: 'Roboto Condensed', sans-serif;
 text-align: center;
 margin-top: 50px;
 `;
+
 
 const ContactContainer = styled.div`
 width:400px;
@@ -70,6 +87,37 @@ border-bottom: 10px solid #42C2FF;
 text-align: center;
 `
 
+const MyImage = styled.img`
+width: 400px;
+height: 400px;
+`
+
+const DetailContainer = styled.div`
+display: flex;
+flex-direction: column;
+`
+
+const DetailRight = styled.div`
+height: 100vh;
+weight 50%;
+`
+
+const DetailLeft = styled.div`
+height: 100vh;
+width: 50%;
+`
+
+const DetailRow = styled.div`
+display: flex;
+margin-bottom: 10px;
+`
+
+const DetailContent = styled.div`
+color: black;
+font-size: 18px;
+width: 300px;
+font-family: 'Roboto Condensed', sans-serif;
+`
 function LearnPage() {
     return (
         <LearnContainer>
@@ -91,6 +139,23 @@ function LearnPage() {
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     24 June 2004
                 </ContactContainer>
+                {/* <DetailContainer>
+                    <DetailLeft>
+                        <DetailRow>
+                            <DetailContent>
+                                Name: 
+                            </DetailContent>
+                        </DetailRow>
+                    </DetailLeft>
+                    <DetailRight>
+                        <DetailRow>
+                            <DetailContent>
+                                Andrew Chang
+                            </DetailContent>
+                        </DetailRow>
+                    </DetailRight>
+
+                </DetailContainer> */}
                 <Imagecontainer><img src = "http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/man-technologist-light-skin-tone.png" /></Imagecontainer>
             </Upside>
             <Downside>

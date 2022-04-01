@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 
 const Container = styled.div`
     display: flex;
+    height: 100vh;
 `;
 
 const WelcomeTitle = styled.h1`
@@ -25,7 +26,6 @@ const LeftSide = styled.div`
 
 const RightSide = styled.div`
     width: 50%;
-    background-color: teal;
     height: 100vh
     backround-image: url("https://www.wallstwatchdog.com/wp-content/uploads/2016/11/Self-employed-business-person-working-from-home.jpg");
 `;// 

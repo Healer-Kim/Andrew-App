@@ -1,8 +1,10 @@
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import React from "react";
 import ReactDOM from "react-dom";
 //import { Row, Col} from "react-bootstrap";
 //import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const Container2 = styled.div`
     display: flex;
@@ -66,16 +68,6 @@ right: 0;
 top: 40px;
 `
 
-const Facebook = styled.div`
-background-image: url("https://cdn.pixabay.com/photo/2017/11/10/05/04/facebook-2935402_960_720.png");
-width: 40px;
-height: 40px;
-background-size: 40px 40px;
-position: absolute;
-right: 0;
-top: 0px;
-`
-
 const Linkedin = styled.div`
 background-image: url("https://cdn.pixabay.com/photo/2017/11/10/05/05/linkedin-2935407_960_720.png");
 width: 40px;
@@ -86,9 +78,41 @@ right: 0;
 top: 120px;
 `
 
+const ImageWrapper = styled.div`
+display: flex;
+justify-content: center;
+
+`
+
+const LogoImage = styled.div`
+width: 60px;
+height: 60px;
+margin-right: 20px;
+
+`// filter: invert(40%) sepia(2%) saturate(2682%) hue-rotate(315deg) brightness(94%) contrast(98%);
+
+const Button = styled.button`
+background-color: white;
+margin-top 30px;
+color:black;
+font-size: 22px;
+font-weight: 700;
+padding: 10px;
+width: 120px;
+height: 50px;
+border: none;
+border-radius: 10px;
+`
+
 
 
 function MainPage() {
+    const history = useHistory ();
+    // Function which navigates to a new page 
+    const navigateToLearnMore = () => {
+        history.push("/learn");
+    };
+
     return (
         <Container2>
             <UpSide>
@@ -101,8 +125,27 @@ function MainPage() {
                     <button type="button" onClick="window.open('https://github.com/')"> <img src="https://pngset.com/images/github-icon-free-download-symbol-logo-trademark-label-transparent-png-1868500.png" height ="15" width="15" /></button>
                 </MediaContainer>
                 <MediaContainer>
+                        {/* <a>
+                            href =""
+                            target ="_blank"
+                        </a> */}
+
                     <button type="button" onClick="window.open('https://www.linkedin.com/home/?originalSubdomain=kr')"> <img src="https://cdn.pixabay.com/photo/2017/11/10/05/05/linkedin-2935407_960_720.png" height ="15" width="15" /></button>
                 </MediaContainer>
+                <ImageWrapper>
+                    <a href = "https://stackoverflow.com/" target="_blank">
+                        <LogoImage src={Stackoverflow} />
+                    </a>
+                    <a href = "https://github.com/" target="_blank">
+                        <LogoImage src={Github} />
+                    </a>
+                    <a href = "https://www.linkedin.com/home/?originalSubdomain=kr" target="_blank">
+                        <LogoImage src={Linkedin} />
+                    </a>
+                    
+
+                </ImageWrapper>
+                <button onClick={navigateToLearnMore}>Learn More</button>
             </UpSide>
             <DownSide>
             </DownSide>
