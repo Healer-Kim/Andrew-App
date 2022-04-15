@@ -151,6 +151,7 @@ width: 100px;
 margin-right: 20px;
 display: flex;
 display-direction: row;
+font-display: center;
 `
 
 
@@ -211,7 +212,8 @@ function LearnPage() {
                     <EducationContainer>
                         <h1>Education</h1>
                         <EducationRowContainer>
-                            <EducationLabel>GPA</EducationLabel>
+                            <div>
+                            <EducationLabel>GPA</EducationLabel> 
                                 <ProgressBar 
                                 style = {barStyle} 
                                 label = {`4.8/5.0`}
@@ -222,10 +224,10 @@ function LearnPage() {
                             <EducationLabel>SAT</EducationLabel>
                                 <ProgressBar 
                                 style = {barStyle} 
-                                label = {`1111/1600`}
+                                label = {`1550/1600`}
                                 max={1600} 
                                 min={0}
-                                now={1111}
+                                now={1550}
                                 ></ProgressBar>
                             <EducationLabel>TOEFL</EducationLabel>
                                 <ProgressBar 
@@ -251,6 +253,8 @@ function LearnPage() {
                                 min={0}
                                 now={5}
                                 ></ProgressBar>
+                            </div>
+                            
                         </EducationRowContainer>
                     </EducationContainer>
                 </Downside>
