@@ -3,10 +3,14 @@ import styled from "styled-components";
 //import "bootstrap/dist/css/bootstrap.min.css";
 import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
+import { ProgressBar, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
+//import Me from "../Images/me.jpg"
+import "./index.css";
 
 const LearnContainer = styled.div`
-height: 100vh;
+height: 100%;
 display: flex;
 flex-direction: column;
 background-color: #85F4FF;
@@ -118,49 +122,140 @@ font-size: 18px;
 width: 300px;
 font-family: 'Roboto Condensed', sans-serif;
 `
+
+const AboutMeContainer = styled.div`
+display: flex;
+flex-direction: column;
+width: 100%;
+padding-top: 50px;
+padding-bottom: 80px;
+`
+
+const EducationContainer = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-top: 50px;
+padding-bottom: 80px;
+`
+
+const EducationRowContainer = styled.div`
+display: flex;
+margin-bottom: 10px;
+`
+
+const EducationLabel = styled.div`
+width: 100px;
+margin-right: 20px;
+display: flex;
+display-direction: row;
+`
+
+
+
+
+
 function LearnPage() {
+    const barStyle = {        
+        width: "300px",
+        backgroundColor: "yellow",
+        height: "40px",
+};   
     return (
         <LearnContainer>
-            <Upside>
-                <Title>About Me</Title>
-                <Subtitle>Hello I am Andrew Chang. I am a student from South Korea.</Subtitle>
-                <Maintext>My Contact</Maintext>
-                <ContactContainer>
-                    Name: 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    Andrew Chang<br></br><br></br>
-                    Email:
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    2023andrewchang@usbccollegiate.org<br></br><br></br>
-                    Phone: 
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    010-1234-5678<br></br><br></br>
-                    Date of Birth: 
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    24 June 2004
-                </ContactContainer>
-                {/* <DetailContainer>
-                    <DetailLeft>
-                        <DetailRow>
-                            <DetailContent>
-                                Name: 
-                            </DetailContent>
-                        </DetailRow>
-                    </DetailLeft>
-                    <DetailRight>
-                        <DetailRow>
-                            <DetailContent>
-                                Andrew Chang
-                            </DetailContent>
-                        </DetailRow>
-                    </DetailRight>
+            <AboutMeContainer>
+                
+                <Upside>
+                    <Title>About Me</Title>
+                    <Subtitle>Hello I am Andrew Chang. I am a student from South Korea.</Subtitle>
+                    <Maintext>My Contact</Maintext>
+                    <ContactContainer>
+                        Name: 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Andrew Chang<br></br><br></br>
+                        Email:
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        2023andrewchang@usbccollegiate.org<br></br><br></br>
+                        Phone: 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        010-1234-5678<br></br><br></br>
+                        Date of Birth: 
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        24 June 2004
+                    </ContactContainer>
+                    {/* <DetailContainer>
+                        <DetailLeft>
+                            <DetailRow>
+                                <DetailContent>
+                                    Name: 
+                                </DetailContent>
+                            </DetailRow>
+                        </DetailLeft>
+                        <DetailRight>
+                            <DetailRow>
+                                <DetailContent>
+                                    Andrew Chang
+                                </DetailContent>
+                            </DetailRow>
+                        </DetailRight>
 
-                </DetailContainer> */}
-                <Imagecontainer><img src = "http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/man-technologist-light-skin-tone.png" /></Imagecontainer>
-            </Upside>
-            <Downside>
+                    </DetailContainer> */}
+                    <Imagecontainer><img src = "http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/man-technologist-light-skin-tone.png" /></Imagecontainer>
+                </Upside>
 
-            </Downside>
+                <Downside>
+                    
+                    
+                    <EducationContainer>
+                        <h1>Education</h1>
+                        <EducationRowContainer>
+                            <EducationLabel>GPA</EducationLabel>
+                                <ProgressBar 
+                                style = {barStyle} 
+                                label = {`4.8/5.0`}
+                                max={5.0} 
+                                min={0.0}
+                                now={4.8}
+                                ></ProgressBar>
+                            <EducationLabel>SAT</EducationLabel>
+                                <ProgressBar 
+                                style = {barStyle} 
+                                label = {`1111/1600`}
+                                max={1600} 
+                                min={0}
+                                now={1111}
+                                ></ProgressBar>
+                            <EducationLabel>TOEFL</EducationLabel>
+                                <ProgressBar 
+                                style = {barStyle} 
+                                label = {`111/120`}
+                                max={120} 
+                                min={0}
+                                now={111}
+                                ></ProgressBar>
+                            <EducationLabel>AP Econ</EducationLabel>
+                                <ProgressBar 
+                                style = {barStyle} 
+                                label = {`5/5`}
+                                max={5} 
+                                min={0}
+                                now={5}
+                                ></ProgressBar>
+                            <EducationLabel>AP Chem</EducationLabel>
+                                <ProgressBar 
+                                style = {barStyle} 
+                                label = {`5/5`}
+                                max={5} 
+                                min={0}
+                                now={5}
+                                ></ProgressBar>
+                        </EducationRowContainer>
+                    </EducationContainer>
+                </Downside>
+
+            </AboutMeContainer>
         </LearnContainer>
     )
 }
